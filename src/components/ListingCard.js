@@ -1,6 +1,11 @@
 import React from "react";
 
 function ListingCard() {
+
+  fetch("http://localhost:6001/listings")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error fetching data:', error));
   return (
     <li className="card">
       <div className="image">
